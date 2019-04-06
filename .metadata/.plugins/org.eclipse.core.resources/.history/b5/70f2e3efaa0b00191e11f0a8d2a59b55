@@ -1,0 +1,36 @@
+package br.com.bytebank.banco.teste;
+
+//Array [] 
+public class TesteArrayReferencia {
+
+	public static void main(String[] args) {
+
+		int[] idades = new int[5];// array inicializado com valores padrao , int == zero
+
+		// idades[0] = 10;
+		// idades[1] = 15;
+		// idades[2] = 20;
+		// idades[3] = 25;
+		// idades[4] = 30;
+
+		int tamanhoArray = idades.length;
+		System.out.println("Tamanho do array: " + tamanhoArray);
+
+		// int idade1 = idades[0];
+
+		for (int i = 0; i < idades.length; i++) {
+			idades[i] = i * i;
+		}
+
+		for (int i = 0; i < idades.length; i++) {
+			System.out.println(idades[i]);
+		}
+		//
+		// int idade1 = 29;
+		// int idade2 = 39;
+		// int idade3 = 49;
+		// int idade4 = 59;
+		// int idade5 = 27;
+	}
+
+}

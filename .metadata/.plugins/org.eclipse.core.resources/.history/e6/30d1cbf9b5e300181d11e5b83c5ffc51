@@ -1,0 +1,9 @@
+
+public abstract interface Tributavel {
+
+	public double getValorImposto(double saldo) {
+		
+		return saldo*0.01;
+	}
+
+}

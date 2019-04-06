@@ -1,0 +1,14 @@
+package br.com.projeto.Set.exercicios;
+
+import java.util.*;
+
+public class TestandoIterator {
+    public static void main(String[] args) {
+
+        List<String> letras = new LinkedList<>();
+        letras.add("A");
+        letras.add("B");
+        letras.add("C");
+        //...
+    }
+}

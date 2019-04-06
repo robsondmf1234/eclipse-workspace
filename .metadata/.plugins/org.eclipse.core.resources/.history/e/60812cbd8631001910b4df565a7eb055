@@ -1,0 +1,16 @@
+package br.com.projeto;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStreamReader;
+
+public class TesteLeitura {
+	
+	public static void main(String[] args) throws FileNotFoundException {
+		
+		FileInputStream fis = new FileInputStream("loren.txt");
+		InputStreamReader isr = new InputStreamReader(fis);
+		
+	}
+
+}

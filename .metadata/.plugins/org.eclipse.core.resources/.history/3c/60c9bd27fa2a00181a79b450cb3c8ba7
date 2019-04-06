@@ -1,0 +1,84 @@
+package buscandoNoBanco;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+
+//melhorar 
+//mostrar a dataDeNascimento no método buscar
+
+public class ContatoDao {
+
+	private Connection connection;
+	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	
+	public ContatoDao() {
+		this.connection = new ConnectionFactory().getConnection();
+	}
+
+	public void adiciona(Contato contato) {
+		String sql = "insert into contatos " +
+		"(nome,email,endereco,dataNascimento)" +
+		" values (?,?,?,?)";
+
+		try {
+			// prepared statment para inserção
+			PreparedStatement stmt = connection.prepareStatement(sql);
+
+			// seta os valores
+			stmt.setString(1, contato.getNome());
+			stmt.setString(2, contato.getEmail());
+			stmt.setString(3, contato.getEndereco());
+			stmt.setDate(4, new Date(contato.getDataNascimento().getTimeInMillis()));
+
+			// executa
+			stmt.execute();
+			stmt.close();
+			
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	public void busca() {
+		
+		try {
+			PreparedStatement stmt = this.connection.prepareStatement("select * from contatos");
+			
+			ResultSet rs = stmt.executeQuery();
+			
+			while (rs.next()) {
+				
+				
+				String nome = rs.getString("nome");
+				String email = rs.getString("email");
+				String endereco = rs.getString("endereco");
+				
+				Calendar data = Calendar.getInstance();
+				data.setTime(rs.getDate("dataNascimento"));
+				//Date date = data.getTime();
+				//System.out.println(sdf.format(data));
+				
+				
+				System.out.println("Nome: "+nome);
+				System.out.println("Email: "+email);
+				System.out.println("Endereco: "+endereco);
+				
+				//Formata a data
+				//DateFormat formataData = DateFormat.getDateInstance();
+				//System.out.println("Data atual com formatação: "+ formataData.format(data));
+				
+				System.out.println("Data de Nascimento:"+data.getTime());
+						
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+	
+}

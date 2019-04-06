@@ -1,0 +1,7 @@
+
+public class SaldoInsuficienteExcption extends RuntimeException {
+
+	public SaldoInsuficienteExcption(String msg) {
+		super(msg);
+	}
+}

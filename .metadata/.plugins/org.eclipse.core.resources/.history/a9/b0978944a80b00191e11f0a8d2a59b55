@@ -1,0 +1,22 @@
+package br.com.bytebank.banco.teste;
+
+//Array [] 
+public class Teste {
+
+	public static void main(String[] args) {
+
+		int[] idades = new int[5];//array inicializado com valores padrao , int == zero
+
+		idades[0] = 15;
+
+		System.out.println(idades[0]);
+		
+		//
+		// int idade1 = 29;
+		// int idade2 = 39;
+		// int idade3 = 49;
+		// int idade4 = 59;
+		// int idade5 = 27;
+	}
+
+}

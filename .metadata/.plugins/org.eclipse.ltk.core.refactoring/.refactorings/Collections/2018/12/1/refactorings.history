@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 packages to &apos;Collections2/src&apos;&#x0D;&#x0A;- Original project: &apos;Collections&apos;&#x0D;&#x0A;- Destination element: &apos;Collections2/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Collections/src/br.com.bytebank.banco.modelo&#x0D;&#x0A;     Collections/src/br.com.bytebank.banco.teste" description="Copy packages" destination="=Collections2/src" element1="/src&lt;br.com.bytebank.banco.modelo" element2="/src&lt;br.com.bytebank.banco.teste" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1546206340962" version="1.0"/>
+</session>

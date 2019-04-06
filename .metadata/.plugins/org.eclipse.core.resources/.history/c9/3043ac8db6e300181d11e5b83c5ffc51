@@ -1,0 +1,11 @@
+
+public class AcaoBolsa implements Tributavel{
+F
+
+	@Override
+	public double getValorImposto() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

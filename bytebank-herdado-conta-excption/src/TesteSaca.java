@@ -1,0 +1,18 @@
+
+public class TesteSaca {
+
+	public static void main(String[] args) {
+
+		Conta conta1 = new ContaCorrente(123, 321);
+
+		// Testando a exception de saldo insuficiente
+		conta1.deposita(200);
+		//Tratamento do Excpetion(Tipo: Checked)
+		try {
+			conta1.saca(195);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+}

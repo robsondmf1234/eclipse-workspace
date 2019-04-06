@@ -1,0 +1,17 @@
+package teste;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		int pesomaximo =100;
+		int capacidade = 3;
+		int [] pacotes = {10,20,30,40};
+		int pesoTemp=0;
+		
+		pesoTemp = pacotes[0]+ pacotes[1]+ pacotes[2]+pacotes[3];
+		
+		System.out.println(pesoTemp);
+	}
+
+}

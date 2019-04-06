@@ -1,0 +1,16 @@
+package br.com.bytebank.banco.teste;
+
+public class Teste {
+
+	public static void main(String[] args) {
+		
+		int[]
+				
+		int idade1 = 29;
+		int idade2 = 39;
+		int idade3 = 49;
+		int idade4 = 59;
+		int idade5 = 279;
+	}
+
+}
