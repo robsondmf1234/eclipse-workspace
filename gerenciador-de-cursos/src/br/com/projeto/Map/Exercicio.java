@@ -15,6 +15,10 @@ public class Exercicio {
 		pessoas.put(23, "Romulo Henrique");
 		
 		
+		pessoas.keySet().forEach( idade->{
+			System.out.println("Valor da idade é: "+pessoas.get(idade));
+		});
+		
 		for (String string : args) {
 			
 		}
