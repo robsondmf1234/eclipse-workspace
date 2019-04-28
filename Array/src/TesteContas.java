@@ -1,23 +1,25 @@
+//Classe Para testar as contas
 public class TesteContas {
 
 	public static void main(String[] args) {
-
+		
+		//Instanciando um objeto do tipo ContaCorrente
 		ContaCorrente cc = new ContaCorrente(1337, 23334);
+		//Chamado o m√©todo deposita
 		cc.deposita(100.0);
-
+	
+		//Instanciando um objeto do tipo ContaPoupanca
 		ContaPoupanca cp = new ContaPoupanca(222, 222);
+		//Chamado o m√©todo deposita
 		cp.deposita(200);
-
+		
+		//Transferindo dinheiro para conta poupanca
 		cc.transfere(10.0, cp);
 
 		System.out.println("Conta corrente: " + cc.getSaldo());
-		System.out.println("Conta poupanÁa: " + cp.getSaldo());
+		System.out.println("Conta poupan√ßa: " + cp.getSaldo());
 
-		// System.out.println("o total de contas È : " + Conta.getTotal());
-		// System.out.println(conta.getSaldo());
-		// Conta.setAgencia(570);
-		// System.out.println(conta.getAgencia());
-
+	
 	}
 
 }
