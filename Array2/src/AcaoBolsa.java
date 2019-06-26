@@ -1,4 +1,4 @@
-
+//Classe que implementa a classe Tributavel
 public class AcaoBolsa implements Tributavel {
 
 	@Override
